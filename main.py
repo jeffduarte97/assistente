@@ -70,6 +70,12 @@ bt1.grid(row=2, column=1)
 bt2.grid(row=3, column=1)
 
 #Deixar a janela em loop
+def pythonExit():
+    if messagebox.askokcancel("Sair", "Você realmente deseja sair da tela de login?"):
+        exit()
+        jan.destroy()
+
+jan.protocol("WM_DELETE_WINDOW", pythonExit)
 jan.mainloop()
 
 # Sistema de permanencia
