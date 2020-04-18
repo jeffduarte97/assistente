@@ -10,9 +10,7 @@ en = pyttsx3.init()
 voices = en.getProperty('voices')
 en.setProperty('rate', 175)
 for voice in voices:
-    if voice.languages[0] == b'\x05pt-br':
-        en.setProperty('voice', voice.id)
-        break
+    en.setProperty('', voice.id)
 
 #Criar janela de login
 jan = Tk()
